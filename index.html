@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title>6 pro</title>
+	<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https:fonts.googleapis.com" />
+  <link rel="preconnect" href="https:fonts.gstatic.com" />
+  <link href="https:fonts.googleapis.com/css2?family=Lato:wgh@100;300;400;700;900&family=Roboto:wgh@100;300;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Exo+2:ital,wght@0,400;1,900&family=Lilita+One&display=swap" rel="stylesheet">
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+   integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+   />
+   <link href="https:fonts.googleapis.com/css2?family=Lato:wgh@100;300;400;700;900&family=Roboto:wgh@100;300;500;700;900&display=swap" rel="stylesheet" />
+   
+</head>
+<body onresize="KeepRespo()">
+	<nav class="nav" id="nav">
+		<a href="#"><img src="img/6pro.png" class="img-logo" alt="6 PRO"></a>
+		<h2>Mansour CISS</h2>
+		<ul id="links">
+			<li class="active"><a href="#"><i class="fa-solid fa-house"></i> Accueil</a></li>
+			<li><a href="#"> <i class="fa-solid fa-phone"></i> Contact </a></li>
+			<li><a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp </a></li>
+			<li><a href="#"> <i class="fa-regular fa-envelope"></i> Email </a></li>
+			<li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook </a></li>
+		</ul>
+		<img src="img/nav.png" id="img" onclick="toggleFunc()">
+	</nav>
+	<div class="container">
+
+	
+		<main>
+			
+			 
+			 <a href="#">
+			 <article> 
+			 <img src="img/classe.jpg">
+			 <p>CLASSE</p>
+			 </article>
+			 </a>
+
+			 <a href="#">
+			 <article>  
+			 <img src="img/eleve.jpg">
+			 <p>ÉLÈVE</p>
+			 </article>
+			 </a>
+			 
+			 <a href="#">
+			 <article> 
+			 <img src="img/maitre.jpg">
+			 <p>MAÎTRE</p>
+			 </article>
+			 </a>
+			 
+			 <a href="#">
+			 <article> 
+			 <img src="https://zupimages.net/up/22/41/rdwi.png">
+			 <p>NOTES</p>
+			 </article>
+			</a>
+			 
+			<a href="#">
+				<article> 
+				<img src="https://zupimages.net/up/22/41/rdwi.png">
+				<p>NOTES</p>
+				</article>
+			   </a>
+
+			  
+		   </main>
+
+		   <aside>
+           	 <a href="#"><img src="https://zupimages.net/up/23/06/iwro.png" alt=""></a>
+           	 <h1 class="h1Aside">Ecole Mamadou Mansour Sy</h1>
+           	 <div class="contact-Box">
+                <a href=""><img src="https://zupimages.net/up/23/06/gxo9.png" alt=""></a>
+                <a href=""><img src="https://zupimages.net/up/23/06/s7vc.png" alt=""></a>
+                <a href=""><img src="https://zupimages.net/up/23/06/ddi5.png" alt=""></a>
+                <a href=""><img src="https://zupimages.net/up/23/06/7ju9.png" alt=""></a>
+           	 </div>
+        	</aside>
+
+	</div>
+
+
+	
+
+    
+	<script>
+
+		var up = true;
+		const links = document.getElementById('links');
+		const img = document.getElementById('img');
+
+		const toggleFunc = () => {
+             if (up) {
+             	links.style.display = "block";
+             	up = false;
+             	img.src = "img/close.png";
+             }else {
+             	links.style.display = "none";
+             	up = true;
+             	img.src = "img/nav.png";
+             }
+		}
+
+		const KeepRespo = () =>{
+			let w = window.innerWidth;
+			if(w > 760){
+				links.style.display = "block";
+             	up = false;
+             }else {
+             	links.style.display = "none";
+             	img.src = "img/nav.png";
+             	up = true;
+             }
+		}
+		var lastScrollTop = 0;
+		nav = document.getElementById("nav");
+		window.addEventListener("scroll", function(){
+			var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			if (scrollTop > lastScrollTop){
+				nav.style.top="-50px";
+			}else{
+				nav.style.top="0";
+			}
+			lastScrollTop = scrollTop;
+		})
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	
+</body>
+</html>
